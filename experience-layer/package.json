@@ -1,0 +1,21 @@
+{
+  "name": "experience-layer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently --kill-others \"npm run auth\" \"npm run account\" \"npm run profile\" \"npm run transaction\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "auth": "node auth-service.js",
+    "account": "node account-service.js",
+    "profile": "node profile-service.js",
+    "transaction": "node transaction-service.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrency": "^0.1.4",
+    "concurrently": "^8.2.2",
+    "express": "^4.18.2"
+  }
+}
